@@ -1,0 +1,15 @@
+# Mac System Files
+.DS_Store
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ROS 2 Workspace Build Folders
+build/
+install/
+log/
+
+# VS Code Local Settings (Optional, but good practice)
+.vscode/

@@ -1,0 +1,19 @@
+{
+  "name": "ROS 2 Jazzy Mac Workspace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "webPort": 6080
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}
