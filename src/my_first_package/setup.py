@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='root',
+    maintainer='kosuke',
     maintainer_email='246223926+kosuke-satake@users.noreply.github.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='My first ROS 2 package',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
