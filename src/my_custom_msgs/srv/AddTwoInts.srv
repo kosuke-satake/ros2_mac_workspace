@@ -1,0 +1,12 @@
+# AddTwoInts.srv
+# This is a custom Service definition.
+# It is divided into two parts by the "---" line.
+
+# 1. The REQUEST (What the Client sends to the Server)
+int64 a
+int64 b
+
+---
+
+# 2. The RESPONSE (What the Server calculates and sends back)
+int64 sum

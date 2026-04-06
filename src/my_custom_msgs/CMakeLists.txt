@@ -12,6 +12,7 @@ find_package(rosidl_default_generators REQUIRED)
 # Declare the custom messages we want to build
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RobotStatus.msg"
+  "srv/AddTwoInts.srv"
 )
 
 ament_export_dependencies(rosidl_default_generators)
