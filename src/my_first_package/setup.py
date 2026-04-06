@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'simple_node = my_first_package.simple_node:main'
+            'simple_node = my_first_package.simple_node:main',
+            'simple_subscriber = my_first_package.simple_subscriber:main'
         ],
     },
 )
