@@ -12,3 +12,4 @@ RUN apt-get update && apt-get install -y \
 # 3. AUTOMATE THE SOURCING
 # This runs the setup.bash automatically every time you open a VS Code terminal
 RUN echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc
+RUN echo "if [ -f /workspaces/ros2_mac_workspace/install/setup.bash ]; then source /workspaces/ros2_mac_workspace/install/setup.bash; fi" >> /root/.bashrc
