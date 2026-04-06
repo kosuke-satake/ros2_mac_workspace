@@ -26,7 +26,8 @@ setup(
         'console_scripts': [
             'simple_node = my_first_package.simple_node:main',
             'simple_subscriber = my_first_package.simple_subscriber:main',
-            'temperature_sensor = my_first_package.temperature_sensor_node:main'
+            'temperature_sensor = my_first_package.temperature_sensor_node:main',
+            'status_publisher = my_first_package.robot_status_publisher:main'
         ],
     },
 )
