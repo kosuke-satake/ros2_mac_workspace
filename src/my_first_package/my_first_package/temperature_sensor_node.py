@@ -10,12 +10,19 @@ class TemperatureSensorNode(Node):
     def __init__(self):
         super().__init__('temperature_sensor')
         
+        # --- NEW: DECLARING A PARAMETER ---
+        # 1. We tell ROS: "I have a parameter named 'publish_frequency'. Its default value is 2.0."
+        self.declare_parameter('publish_frequency', 2.0)
+        
+        # 2. We READ the parameter's current value from ROS and store it in a Python variable.
+        # The .get_parameter_value().double_value extracts the actual decimal number.
+        timer_period = self.get_parameter('publish_frequency').get_parameter_value().double_value
+        
         # 1. THE PLUMBING (ROS 2)
         # Create a publisher that sends Float64 messages on the 'temperature' topic
         self.publisher_ = self.create_publisher(Float64, 'temperature', 10)
         
-        # Create a timer that runs our callback every 2 seconds
-        timer_period = 2.0  
+        # Create a timer that runs our callback using the parameter we just read!
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
     def timer_callback(self):
